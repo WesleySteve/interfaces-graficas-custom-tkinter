@@ -3,4 +3,4 @@ def run(msg: str = "Hello World") -> None:
 
 
 if __name__ == "__main__":
-    run("Executado diretamente pelo Python")
+    run("Executado diretamente pelo Python.")
