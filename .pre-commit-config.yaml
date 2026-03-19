@@ -30,10 +30,7 @@ repos:
       - id: conventional-pre-commit
         stages: [commit-msg]
         args: [--strict, --force-scope, feat, fix, chore, test]
-  - repo: https://github.com/RobertCraigie/pyright-python
-    rev: v1.1.408
-    hooks:
-      - id: pyright
+
   - repo: local
     hooks:
       - id: pytest

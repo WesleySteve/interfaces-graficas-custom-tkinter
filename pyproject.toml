@@ -25,10 +25,11 @@ description = "interfacesgraficas"
 readme = "README.md"
 license = "MIT"
 authors = [{ name = "Seu nome", email = "seu@email.com" }]
-requires-python = ">=3.14"
+requires-python = ">=3.13"
 dependencies = [
     "customtkinter>=5.2.2",
     "pre-commit>=4.5.1",
+    "pyright>=1.1.408",
     "pytest>=9.0.2",
     "python-dotenv>=1.1.0",
 ]
@@ -48,14 +49,14 @@ dev = ["ruff", "pyright", "pytest", "pytest-xdist"]
 # O valor aponta para 'nome_do_pacote.nome_do_modulo:nome_da_funcao'.
 # Ex: 'interfacesgraficas.main:run' -> src/interfacesgraficas/main.py (e a função run lá dentro).
 # Lembre-se de sincronizar o nome do pacote com 'known-first-party' do Ruff.
-interfacesgraficas = "interfacesgraficas.main:run"
+# interfacesgraficas = "interfacesgraficas.main:run"
 
 # ============================
 # Lint e formatação (Ruff)
 # ============================
 [tool.ruff]
-line-length = 88
-target-version = "py314"
+line-length = 79
+target-version = "py313"
 fix = true
 show-fixes = true
 indent-width = 4
@@ -104,7 +105,7 @@ ignore = ["T201", "COM812"]
 "tests/**/*.py" = ["ANN201", "S101"]
 
 [tool.ruff.format]
-quote-style = "double"
+quote-style = "single"
 indent-style = "space"
 line-ending = "lf"
 
@@ -119,7 +120,7 @@ known-first-party = ["interfacesgraficas"]
 # ============================
 [tool.pyright]
 typeCheckingMode = "strict"
-pythonVersion = "3.14"
+pythonVersion = "3.13"
 include = ["src", 'tests']
 exclude = [
     "**/venv",
